@@ -1,0 +1,99 @@
+Webservice Document 
+
+--------------------------------------------------------------------------------------------------
+Name 		: addCategory
+WebService 	: [WebPath]/webcommerce.php?request=addCategory
+Method		: POST
+RequestParam: {"name":"Veg","description":"Veg is healthy for body","tax":5}
+Response 	: {"resultData":{"categoryId":1},"responseStatus":"Success","message":"Category added successfully"}
+--------------------------------------------------------------------------------------------------
+Name 		: updateCategory
+WebService 	: [WebPath]/webcommerce.php?request=updateCategory
+Method		: PUT
+RequestParam: {"name":"Veg","description":"Veg is healthy for body","tax":10,"categoryId":1}
+Response 	: {"resultData":"","responseStatus":"Success","message":"Category updated successfully"}
+--------------------------------------------------------------------------------------------------
+Name 		: deleteCategory
+WebService 	: [WebPath]/webcommerce.php?request=deleteCategory
+Method		: DELETE
+RequestParam: {"categoryId":1}
+Response 	: {"resultData":"","responseStatus":"Success","message":"Category deleted successfully"}
+--------------------------------------------------------------------------------------------------
+Name 		: categoryList
+WebService 	: [WebPath]/webcommerce.php?request=categoryList
+Method		: GET
+RequestParam: 
+Response 	: {"resultData":[{"id":2,"name":"Veg","description":"Veg is healthy for body","tax":10}],"responseStatus":"Success","message":"Category listed successfully"}
+--------------------------------------------------------------------------------------------------
+Name 		: addProduct
+WebService 	: [WebPath]/webcommerce.php?request=addProduct
+Method		: POST
+RequestParam: {"name":"Apple","description":"An apple a day keep docter away","price":50,"discount":5,"categoryId":2}
+Response 	: {"resultData":{"productId":2},"responseStatus":"Success","message":"Product added successfully"}
+--------------------------------------------------------------------------------------------------
+Name 		: updateProduct
+WebService 	: [WebPath]/webcommerce.php?request=updateProduct
+Method		: PUT
+RequestParam: {"name":"Apple","description":"An apple a day keep docter away","price":50,"discount":10,"categoryId":2,"productId":1}
+Response 	: {"resultData":"","responseStatus":"Success","message":"Product updated successfully"}
+--------------------------------------------------------------------------------------------------
+Name 		: deleteProduct
+WebService 	: [WebPath]/webcommerce.php?request=deleteProduct
+Method		: DELETE
+RequestParam: {"productId":1}
+Response 	: {"resultData":"","responseStatus":"Success","message":"Product deleted successfully"}
+--------------------------------------------------------------------------------------------------
+Name 		: productList
+WebService 	: [WebPath]/webcommerce.php?request=productList
+Method		: GET
+RequestParam: 
+Response 	: {"resultData":[{"id":2,"categoryId":2,"name":"Apple","description":"An apple a day keep docter away","price":50,"discount":5}],"responseStatus":"Success","message":"Product listed successfully"}
+--------------------------------------------------------------------------------------------------
+*Name		: createCart
+WebService 	: [WebPath]/webcommerce.php?request=createCart
+Method		: POST
+RequestParam: {"categoryId":1,"productId":1,"quantity":1,"deviceId":2547854785547}
+Response 	: {"resultData":"","responseStatus":"Success","message":"Added to cart successfully"}
+--------------------------------------------------------------------------------------------------
+*Name 		: deleteCart
+WebService 	: [WebPath]/webcommerce.php?request=deleteCart
+Method		: DELETE
+RequestParam: {"categoryId":2,"productId":2,"quantity":1,"deviceId":2547854785547}
+Response 	: {"resultData":"","responseStatus":"Success","message":"Cart item deleted successfully"}
+--------------------------------------------------------------------------------------------------
+Name 		: updateCart
+WebService 	: [WebPath]/webcommerce.php?request=updateCart
+Method		: PUT
+RequestParam: {"categoryId":2,"productId":2,"quantity":1,"deviceId":2547854785547}
+Response 	: {"resultData":"","responseStatus":"Success","message":"Cart updated successfully"}
+--------------------------------------------------------------------------------------------------
+Name 		: showCart
+WebService 	: [WebPath]/webcommerce.php?request=createCart
+Method		: POST
+RequestParam: {"deviceId":2547854785547}
+Response 	: {"resultData":[{"productId":1,"categoryId":1,"productname":"Apple","quantity":"1","price":50,"discount":10,"tax":10,"total":50,"totalDiscount":5,"totalTax":5,"totalWithDiscount":45,"totalWithTax":55,"subTotal":50},{"productId":2,"categoryId":2,"productname":"Apple","quantity":"4","price":50,"discount":5,"tax":10,"total":200,"totalDiscount":10,"totalTax":5,"totalWithDiscount":190,"totalWithTax":205,"subTotal":195},{"grandTotal":245,"cartTotalDiscount":15,"cartTotalTax":10}],"responseStatus":"Success","message":"Cart listed successfully"}
+--------------------------------------------------------------------------------------------------
+Name 		: cartTotal
+WebService 	: [WebPath]/webcommerce.php?request=cartTotal
+Method		: POST
+RequestParam: {"deviceId":2547854785547}
+Response 	: {"resultData":{"grandTotal":102.5},"responseStatus":"Success","message":"Cart total"}
+--------------------------------------------------------------------------------------------------
+Name 		: cartTotalDiscount
+WebService 	: [WebPath]/webcommerce.php?request=cartTotalDiscount
+Method		: POST
+RequestParam: {"deviceId":2547854785547}
+Response 	: {"resultData":{"cartTotalDiscount":97.5},"responseStatus":"Success","message":"Cart total discount"}
+--------------------------------------------------------------------------------------------------
+Name 		: cartTotalTax
+WebService 	: [WebPath]/webcommerce.php?request=cartTotalTax
+Method		: POST
+RequestParam: {"deviceId":2547854785547}
+Response 	: {"resultData":{"cartTotalTax":105},"responseStatus":"Success","message":"Cart total tax"}
+--------------------------------------------------------------------------------------------------
+Name 		: 
+WebService 	: 
+Method		: 
+RequestParam: 
+Response 	: 
+--------------------------------------------------------------------------------------------------
